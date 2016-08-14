@@ -4,10 +4,13 @@
 \usepackage{graphicx}
 \usepackage{lmodern}
 \usepackage{fullpage}
+\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{2}
 
 \pagestyle{plain}
-\title{\textbf{Investigation into the causes of the impact Under 13 funding}}
-\author{Greig Russell}
+\title{\textbf{Time for a change in the governance model of primary care}}
+\author{Dr Greig Russell, \\ BSc BMedSc, MBChB, BA, PGDipCEM \\ MAAFP, FRNZCGP, FRNZCUC, FACHI}
 		\date{\today}
 
 \bibliographystyle{apalike}
@@ -26,60 +29,52 @@
 \listoffigures
 
 \pagebreak
-
 \section{Executive summary}
+Currently the health sector is undergoing the biggest change of direction since the introduction of the primary health strategy by Minister King \citep{king2001primary}. This year the ministry released the future directions for New Zealand health system \citep{ministry2016new}. This refresh emphasised the need for the use of mobile technology and telemedicine to provide provide relevant care closer to the patient home. Together with the use of advanced data analysis to uncover and utilise novel understandings and opportunities within health data across the sector.\\
 
+Locally many practices are combining into large group practices with a changed model of care. These integrated family health care centres (IFHC) offer the potential for a comprehensive suite of services to a population, delivered in a sustainable manner. With a larger group of providers in a single location the development of consequent multidisciplinary teams means care provision is sustainable both with regards to staff absences or organisational renewal. Both of which are difficult in the small corner dairy model of primary care, that has been the historic norm. One concern for maintaining stability of service provision is the financial risk during this early stage of IFHC evolution. Many practices are more collocating, not integrating, generating financial risk by increasing costs without increasing income. \\
+
+Yet for each new initiative, it is important to understand the impacts of the previous initiative. To build on the strengths and avoiding the unintended consequences. This report seeks to understand the impacts of the previous reforms within a single exemplar location - Palmerston North. Review of the literature to date has not revealed a consistent understanding of the impacts. There is a trend of earlier authors being more positive than later authors. \\
+
+This report considers using a novel methodology of Graphic Information Systems (GIS) analysis and then interpreting the results of this analysis using game theory. Where game theory is an adjudicative economic model, that is increasingly being used to understand decision making by rational players and the consequence geo-economic consequences. \\
+
+Although the data set used had considerable limitations and Palmerston North proved to be a too smaller city for this type of analysis, the results suggest the impacts of the 2001 primary health care strategy.\\ 
+
+The analysis found that general practices had moved from a widely distributed model equity model to a retail model, competing with other retailers for the disposable income of the community so locating to the optimal retail locations across Palmerston North.\\
+
+While a "laissez faire" governance model has been the only pragmatic option available, it has meant that the above process have been driven only by microeconomic factors within the wider macroeconomic policy environment. In fairness this seemed to be delivering the requirements of the era. Until on 1st July 2015, free health care for children and young people aged 6-12 years was introduced. \\
+
+This seemingly benign change has had catastrophic changes in Palmerston North Hospital's Emergency Department, with unprecedented numbers attending from all age groups. This increased demand has also caused financial difficulties for the MidCentral DHB, exacerbating pre-existing difficulties.\\
+
+This report concludes that this is a unique opportunity to make changes in the governance of primary care. Both the DHB and IFHC have the need and the opportunity to change. The following recommendations are made as a consequence.\\
+
+\textbf{Recommendations}
+ 
+\begin{enumerate}
+\item That MidCentral DHB assumes direct governance responsibility for primary care.
+\item Therefore the role of the PHO is diminished to providing clinical support for all providers, including the practices that the Central PHO currently owns.
+\item That the DHB forms an alliance with all providers for community based primary care particularly the new IFHC, but also the Urgent Care facilities, Pharmacists and Midwives.
+\item That the DHB will need to invest in developing services to provide the outcomes needed to optimise population health for the district and provide adequate access to community based care. 
+\item Such investment will focus on providing needed outcomes not merely outputs from providers.
+\item That the DHB provides management support and advice to the newly formed IFHC, to recognise that their business survival is intimately linked to the business survival of the DHB itself. 
+\end{enumerate}
+
+
+\pagebreak
 \section{Introduction}
-On the 1st July 2015 the government implemented its election promise to make care free for all children aged 6-12 years who were registered with a Primary Healthcare Organisation.\\
+Primary care delivery within the MidCentral District Health Board (MDHB) region is currently undergoing its biggest change since the introduction of capitation funding and the associated shift to population health.\\
 
-For primary health care providers, the focus was about getting adequate compensation to offset any income loss. Within the secondary care environment, little comment was heard. This funding change was only seen as impacting primary care and even then in a marginal sense.\\
+There has been a driven to amalgamate small practices into larger Integrated Family Health Centres (IFHC), where groups of ten or more doctors, plus associated nursing staff provide primary care for 15,000-20,000 patients. \\
 
-What happened was totally unexpected. By chance the commencement date coincided with a nasty influenza season leading to record numbers attending the Emergency Departments and Urgent Care clinics. These traditionally last six to eight weeks before settling. Only it did not not.
+This report will consider what should be the management stance towards these independent business from the perspective of how did the last large change impact the district and its ability to withstand significant shocks like the recent changes in funding of 6-12 year old young adults within New Zealand.\\
 
-\begin{figure}[htp]
-\centering
-\includegraphics[scale=0.50]{TS_ED.png}
-\caption{Time series analysis splitting from all Emergency Department presentations, the changing trends for utilisation from the underlying seasonal patterns.}
-\label{Time series analysis of Emergency Department presentations}
-\end{figure}
+The significant shock for the whole local health system was when on the 1st July 2015 the government implemented its election promise to make care free for all children aged 6-12 years who were registered with a Primary Healthcare Organisation (PHO)\footnote{http://www.health.govt.nz/your-health/services-and-support/health-care-services/visiting-doctor/zero-fee-doctors-visits-children-aged-under-13}.\\
 
-This change in utilisation patterns is even more marked for those who have used the department for two or three times within the same year.
+For primary health care providers, the focus was about getting adequate compensation to offset any income loss\footnote{http://www.radionz.co.nz/news/political/271689/doctor-visit-promise-falls-short}. Within the secondary care environment, little comment was heard. This funding change was only seen as impacting primary care and even then in a marginal sense.\\
 
-\begin{figure}[htp]
-\centering
-\includegraphics[scale=0.50]{Fchange.png}
-\caption{Changes in ED utilisation in H2 2015, especially for rates of second and third time utilisation within the quarter}
-\label{Changes in Ed utilisation}
-\end{figure}
+What happened was totally unexpected. By chance the commencement date coincided with a nasty influenza season leading to record numbers attending the Emergency Departments and Urgent Care clinics. These traditionally last six to eight weeks before settling. Only it did not not.\\
 
-Yet within General Practice itself, little sustained change in utilisation by the 6-12 years age group was noted.
-
-\begin{figure}[htp]
-\centering
-\includegraphics[scale=0.40]{U13one.png}
-\caption{Stratified rates of GP consultations for Central PHO practices}
-\label{Age stratified General Practice consultations}
-\end{figure}
-
-This change in utilisation has persisted ever since as the new normal.
-
-\begin{figure}[htp]
-\centering
-\includegraphics[scale=0.40]{EWMA_ED_pesentations.png}
-\caption{EWMA chart of weekly ED presentations since 2010, with weeks put of control limits being displayed in red.}
-\label{EWMA statistical process chart of ED presentations}
-\end{figure}
-
-and the projections for the future show growth continuing through until 2017, so creating a capacity crisis within the physical Emergency Department
-
-\begin{figure}[htp]
-\centering
-\includegraphics[scale=0.40]{HW_projections.png}
-\caption{Projection for ED utilisation using a Holt-Winter's methodology.}
-\label{Projections for ED utilisation through to 2017}
-\end{figure}
-
- This unexpected result was contrary to what was envisaged by the  New Zealand Primary Health Care Strategy \citep{king2001primary}. In 2001, the Primary Health Care strategy was released by the then Minister of Health, Annette King \citep{king2001primary}. The aim of this new strategy was to transform the health care landscape within primary care, but with a transformation that reflected the priorities and perspectives of the newly elected Labour Government.\\
+This unexpected result was contrary to what was envisaged by the  New Zealand Primary Health Care Strategy \citep{king2001primary}. In 2001, the Primary Health Care strategy was released by the then Minister of Health, Annette King \citep{king2001primary}. The aim of this new strategy was to transform the health care landscape within primary care, but with a transformation that reflected the priorities and perspectives of the newly elected Labour Government.\\
 
 Minister King inherited a health system that had been through a series of changes, but which had remained the same from a patient perspective for many decades. Until the early 1990s, the New Zealand primary care system had been one of a state subsidy based on a fee for service by a doctor \citep{gauld2006new}. With the neo-conservative health reforms of the early 1990s the split between funders and the providers of care was introduced, along with increased competition between providers as part of a drive for achieving the economic efficiency inherent within the true free market. General Practitioners were allowed to form Independent Practitioner Associations (IPAs) so as to form groups of sufficient size, so that primary care providers could participate effectively in a competitive health care model. These IPAs continued to be predominantly GP led and, as organisations, they remained focused on protecting their General Practitioner members from any negative impacts of the neoliberal health reforms \citep{malcolm1999new}. Some IPAs achieved successes through profit sharing arrangements with the new funding bodies, but essentially from a patient perspective it was business as it had always been. The Government funding of primary care provided less than 10\% of income during practice in this era. This percentage of practice income provided by the state to subsidise patient fees and ease access to community based health care was reduced each year. As the rate of inflation was greater than the rate by which the subsidy increased, the subsidy became an increasingly smaller component of practice income. Even this limited subsidy applied only if the doctor saw the patient and did not apply if the patient saw the practice nurse. This activity based funding system led to absurdities through valueless over servicing. \\    
 
@@ -91,6 +86,7 @@ Driving the adoption and success of the new strategy was an increase in overall 
 
 The challenge in this field of study, has been how to evaluate the actual impacts of the strategy on society and the health system. As without an understanding of how the strategy impact utilisation of primary care, there will not be an understanding of how increasing funding for one group to receive easier access to community case lead to a dramatic rise in utilisation of the emergency department.
 
+\pagebreak
 \section{Literature review}
 Studies considering the impacts of the Primary Health Care Strategy have produced conflicting responses to date. \citet{hefford2005reducing}, examined the strategy's results 15 months after implementation. The authors described the development of performance indicators to allow any effects of the strategy's introduction to be tracked, especially with regards to correcting inequities. The study described  how this increased funding was cumulatively supplemented for those living in areas of high social deprivation by an additional 20\% per enrolled patient in a practice, and by another 20\% for every self-identified Maori or Pacific Islander, who enrolled (p. 14) in the practice \citep{hefford2005reducing}. One clear intention of the strategy was to shift these groups of patients from being financially undesirable to being financially highly desirable. This shift would attract providers to areas of high need and hence correct long-standing health inequities to exploit this new opportunity. If the total enrolled population of ethnic minorities and those who lived in areas of high social deprivation was above 50\% of the locality's enrolled population then further funds were provided to every practice in the locality. \citet{hefford2005reducing}, found that those most in need had enrolled in greater numbers than the general population. The overall level of funding that these ethnic minorities and those patients from socially deprived areas  received was 25-60\% higher under the strategy than under the previous funding formula. The authors argued that this reduction in cost for these previously undesirable patients, and their observed greater uptake will lead to improved health outcomes. The authors described overseas studies which found this exact effect.\\
 
@@ -106,7 +102,8 @@ Depressingly, more recent evidence seems to support Howell's pessimism rather th
 
 \citet{howell2005restructuring} prediction was that fees would again become the primary economic driver for the financial stability of practices. Driven by the ageing  population, there would an associated projected rise in the number of patients with chronic illnesses and multiple comorbidities that would lead to an increased  average utilisation rate greater than that provided under the capitation funding rates. The increased government funding provided through the initial roll out of the Primary Health Care Strategy would have offset the impact of increased utilisation on practice income. After the annual growth in funding ceased then the percentage of income from capitation would have to fall as a percentage of total practice revenue, and a rise in the fees derived income would be needed to offset that reduction in the face of rising utilisation.\\
 
-\section{Methodology}
+\pagebreak
+\section{Analysis methodology used}
 This study was set in the geographically isolated city of Palmerston North with its population of ~78,000 people and considers the effectively closed system from both a health care provision as well as an economic perspective.\\
 
 \begin{figure}[htp]
@@ -151,8 +148,10 @@ Game theory has been applied to the development of health systems. \citep{dobson
 
 Game theory is in one respect an emergent economic theory, yet it is also an established theory, with an increasing repertoire of useful applications in different situations. \\
 
-\section{Results}
-For Game theory to have any applicability in a GIS based study there has to be geographical movement of practice location. Locally individual practices are, however,  noted for their longevity of location. This study revealed that General Practitioner turnover was greater than perceived in Palmerston North, despite the prevailing perception being focused on difficulties of attraction not retention. 
+\pagebreak
+
+\section{Impact of 2001 primary care reforms}
+For Game theory to have any applicability in a GIS based study there has to be geographical movement of practice location. Locally individual practices are, however,  noted for their longevity of location. This study revealed that General Practitioner turnover was greater than perceived in Palmerston North, despite the prevailing perception being focused on difficulties of attraction not retention. \\
 
 \begin{figure}[htp]
 \centering
@@ -165,7 +164,7 @@ This turnover of practitioners was the mechanism of practitioner migration withi
 
 \begin{figure}[htp]
 \centering
-\includegraphics[scale=0.3]{fig4.png}
+\includegraphics[scale=0.25]{fig4.png}
 \caption{Social network analysis illustrating how few practitioners have moved after arrival}
 \label{Movement of Practitioners between practices}
 \end{figure}
@@ -207,14 +206,14 @@ To consider geographic movements of General Practice over time, a series of heat
 
 \begin{figure}[htp]
 \centering
-\includegraphics[scale=0.20]{fig6.png}
+\includegraphics[scale=0.3]{fig6.png}
 \caption{Heat map of the distribution of primary care provision within Palmerston North 2001. Please note that prior to the 2001 Primary Care Health Strategy there was even GP coverage of Palmerston North.}
 \label{Heat map of practitioners 2001}
 \end{figure}  
 
 \begin{figure}[htp]
 \centering
-\includegraphics[scale=0.20]{fig7.png}
+\includegraphics[scale=0.30]{fig7.png}
 \caption{Heat map of the projected distribution of primary care provision within Palmerston North 2016}
 \label{Heat map of the projected distribution of primary care provision within Palmerston North 2016}
 \end{figure}
@@ -223,7 +222,7 @@ The distribution of primary care does not appear to match unmet clinical needs. 
 
 \begin{figure}[htp]
 \centering
-\includegraphics[scale=0.20]{fig8.png}
+\includegraphics[scale=0.30]{fig8.png}
 \caption{A sample of 1000 patients who attended Palmerston North Emergency Department,and did not have a GP in 2014}
 \label{Distribution of patients with a General Practitioner}
 \end{figure}
@@ -232,7 +231,7 @@ This distribution of General Practice providers is also quite different from ser
 
 \begin{figure}[htp]
 \centering
-\includegraphics[scale=0.2]{fig9.png}
+\includegraphics[scale=0.3]{fig9.png}
 \caption{Distribution of bus routes designed to maximise social equity and access by the public}
 \label{Bus routes designed to maximise equity of access}
 \end{figure}
@@ -276,6 +275,101 @@ In summary, the use of Game Theory to analyse the results of GIS data enables an
 \end{enumerate}
 
 Hence, in this location primary care provision is a retail activity, not one driven by the need to achieve patient equity or to address unmet patient need. This conclusion is clearly at odds with the objectives of the Primary Health Care strategy.
+
+\pagebreak
+
+\section{The shock - July 2015}
+General Practice moving to an activity driven funding model to adopting a retail service delivery model under capitation funding model seemed to have no significant adverse effects. The governance of General Practice across the district was with the Central PHO.\\
+
+Central PHO adopted a governance model more "laissez-faire" than "accreditation" \citep{greenwood2007european}. To be fair there was considerable pragmatism to this approach. Many of the group practices are more in the nature of cohabiting solo practices sharing administrative and overhead costs. So there was no coherence for the PHO to engage with. The reality that the Central PHO was established years after many of the general practices. That the PHO went through at least four phases in its management and hence governance of the general practices further undermined the PHO's ability to adopt another style of governance.\\
+
+The general practices are independent businesses, usually owner operated and service provision is via a series of contracts, only one of which is for the provision of primary medical care in the community with Ministry of Health. The nature of the contracts allowed the practices to effectively ignore the PHO if they wished. The funding is transferred from Minsitry of Health to individual practices via the DHB and local PHO\footnote{http://www.health.govt.nz/our-work/primary-health-care/primary-health-care-services-funding-and-contracting}. The contracts themselves are national contracts between the NZMA and the Ministry of Health\footnote{http://www.nzdoctor.co.nz/news/2016/may-2016/16/increase-of-1-per-cent--in-capitation-proposed-for-general-practice.aspx}.\\
+
+Central PHO adopted an approach of working with the willing and the desperate. Lately their aim has been to provided low or free valued added services to enable general practice to achieve the Ministry performance targets. The shared benefit was extra funding for the practices and enabling the PHO to achieve its district wide performance targets against its own contract.\\
+
+There has been no sense of the PHO being able or even being willing to provide other than a "laissez-faire" approach to governance. In fairness without obvious negative consequences beyond professional frustration in senior management, who wished to do more.\\
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.60]{TS_ED.png}
+\caption{Time series analysis splitting from all Emergency Department presentations, the changing trends for utilisation from the underlying seasonal patterns.}
+\label{Time series analysis of Emergency Department presentations}
+\end{figure}
+
+This change in utilisation patterns is even more marked for those who have used the department for two or three times within the same year.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.70]{Fchange.png}
+\caption{Changes in ED utilisation in H2 2015, especially for rates of second and third time utilisation within the quarter}
+\label{Changes in Ed utilisation}
+\end{figure}
+
+Yet within General Practice itself, little sustained change in utilisation by the 6-12 years age group was noted.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.40]{U13one.png}
+\caption{Stratified rates of GP consultations for Central PHO practices}
+\label{Age stratified General Practice consultations}
+\end{figure}
+
+This change in utilisation has persisted ever since as the new normal.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.70]{EWMA_ED_pesentations.png}
+\caption{EWMA chart of weekly ED presentations since 2010, with weeks put of control limits being displayed in red.}
+\label{EWMA statistical process chart of ED presentations}
+\end{figure}
+
+and the projections for the future show growth continuing through until 2017, so creating a capacity crisis within the physical Emergency Department
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.70]{HW_projections.png}
+\caption{Projection for ED utilisation using a Holt-Winter's methodology.}
+\label{Projections for ED utilisation through to 2017}
+\end{figure}
+
+Increased demand for hospital based clinical care was a significant contributor to the poor fiscal result for MidCentral DHB.\\
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.30]{MCHbalance.png}
+\caption{Financial result of MidCentral Health or Palmerston North Hospital, showing a significant deficit against budget }
+\label{Financial result for MidCentral Health - Palmerston North Hospital}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.30]{MCHgraph.png}
+\caption{Graphical representation of the financial performance of MidCentral Health - Palmerston North Hospital}
+\label{}
+\end{figure}
+
+\pagebreak
+
+\section{Conclusions}
+The various newly formed and just opening IFHC are at the start of their organisational evolution. Initially they will be very vulnerable to economic forces until they develop an appropriate business model. Currently, the most common business model is that of the very large scale cohabitation of the founding practices in very large and expensive new premises. A model that dramatically increases costs without increasing income, will cause a sharp loss of shareholder value. A state that usually prompts model change. \\
+
+The DHB financially is in a similar state. The current business model is unsustainable without new premises. The Catch22 is that as the current business model is unsustainable, therefore so is the development of new premises to solve the problem. The DHB is currently on performance watch by the Ministry and keen to find a solution \footnote{http://www.stuff.co.nz/manawatu-standard/news/72250866/MidCentral-DHB-on-performance-watch-after-poor-financial-result}. \\
+
+The previous governance model for general practice, however understandable, failed to provide equity of access or to develop robust systems capable of withstanding economic shocks like the recent funding changes.
+
+The system as a whole can not continue to manage the current demand or its fiscal consequences, so change in the governance model is required;
+
+\section{Recommendations}
+ 
+\begin{enumerate}
+\item That MidCentral DHB assumes direct governance responsibility for primary care.
+\item Therefore the role of the PHO is diminished to providing clinical support for all providers, including the practices that the Central PHO currently owns.
+\item That the DHB forms an alliance with all providers for community based primary care particularly the new IFHC, but also the Urgent Care facilities, Pharmacists and Midwives.
+\item That the DHB will need to invest in developing services to provide the outcomes needed to optimise population health for the district and provide adequate access to community based care. 
+\item Such investment will focus on providing needed outcomes not merely outputs from providers.
+\item That the DHB provides management support and advice to the newly formed IFHC, to recognise that their business survival is intimately linked to the business survival of the DHB itself. 
+\end{enumerate}
+
 
 \pagebreak
 
